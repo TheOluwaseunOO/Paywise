@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Index.css">
+    <title>Paywise DashBoard</title>
+    
+    <script src="Index.js?v=2" defer></script>
+    
+    <script src="https://kit.fontawesome.com/2fc1c4eb70.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.2/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+        <nav>
+            <div class="header-div1">
+                <a href=""><img src="/Assets/Paywise_purple.png" alt="Logo" class="logo"></a>
+                <div class="hi-user">Hi User</div>
+            </div>
+           
+            <div class="header-div2">
+                <i class="fa-brands fa-sistrix" id="sIcon"></i>
+                <input type="search" placeholder="Search" id="search">
+            </div>
+
+            <div class="header-div3">
+                <button class="send-recieve">Send & Recieve</button>
+            </div>
+
+            <div class="header-div4">
+                <a href=""><i class="fa-regular fa-bell" id="notify"></i></a>
+                <div>
+                    <img src="/Assets/man (1).png" alt="img" class="user-dp">
+                </div>
+            </div>
+        </nav>
+
+    <section class="body-section">
+        <div class="leftSide-bar">
+            <div class="bar1">
+                <div><a href=""><i class="fa-solid fa-sun icon"></i></a></div>
+                <div><a href=""><i class="fa-solid fa-moon icon"></i></a></div>
+            </div>
+
+            <div class="bar2">
+                <div><a href=""><i class="fa-solid fa-bars icon"></i></a></div>
+                <div><a href=""><i class="fa-regular fa-image icon"></i></a></div>
+                <div><a href=""><i class="fa-solid fa-wallet icon"></i></a></div>
+                <div><a href=""><i class="fa-regular fa-clock icon"></i></a></div>
+                <div><a href=""><i class="fa-solid fa-user-group icon"></i></a></div>
+                <div><a href=""><i class="fa-solid fa-gear icon"></i></a></div>
+            </div>
+            
+            <div class="bar3">
+                <div><a href=""><i class="fa-solid fa-arrow-right-from-bracket icon icon4"></i></a></div>
+            </div>
+        </div>
+
+        <div class="middle-bar">
+            <div class="dashboard">
+                <div class="dashboard-main">Dashboard</div>
+                <div class="dashboard-coins">
+                    <div>BTC</div>
+                    <div>ETH</div>
+                </div>
+            </div>
+            <div class="middle-upper">
+                <div class="balance">
+                    <div class="my-balance">
+                        <div class="text-balance">
+                            <a href=""><i class="fa-solid fa-wallet icon-balance"></i><b>My Balance</b></a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-ellipsis icon2"></i>
+                        </div>
+                    </div>
+                    <div class="acc-balance">
+                        <div class="acc-balance-text"> $5,587</div>
+                        <div class="show">
+                            <a href=""><i class="fa-solid fa-eye icon-eye"></i></a>
+                        </div>
+                        <div class="interest">
+                            <a href="">+9.8%</a>
+                        </div>
+                    </div>
+
+                    <div class="btc">
+                        <a href=""><iconify-icon icon="logos:bitcoin"></iconify-icon> BTC </a>
+                        <caption> $16,587</caption>
+                    </div>
+                    <div class="btc">
+                        <a href=""><iconify-icon icon="cryptocurrency-color:eth"></iconify-icon> ETH </a>
+                        <caption> $10,587</caption>
+                    </div>
+                </div>
+                
+                <div class="statistics">
+                    <div class="stats-bar1">
+                        <div class="text-balance">
+                            <a href=""><i class="fa-solid fa-square-poll-vertical icon-balance"></i><b>Statistics</b></a>
+                        </div>
+                        <div class="all-stats">
+                            <button class="all">All</button>
+                            <div class="stats-coin">
+                                <a href=""><iconify-icon icon="logos:bitcoin"></iconify-icon> BTC </a>
+                            </div>
+                            <div class="stats-coin">
+                                <a href=""><iconify-icon icon="cryptocurrency-color:eth"></iconify-icon> ETH </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <canvas id="cryptoChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="middle-lower">
+                <div class="proposition-header">
+                    <h2>Proposition</h2>
+                    <div class="sort-text">
+                         <a href="">Sort<i class="fa-solid fa-sliders sort"></i></a>
+                    </div>
+                </div>
+                    
+                <table class="market-table">
+                    <thead>
+                        <tr>
+                            <th>Currency</th>
+                            <th>Price</th>
+                            <th>24H Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="table-btc">
+                            <td><iconify-icon icon="logos:bitcoin"></iconify-icon> <b>Bitcoin</b> <span class="sym">BTC</span></td>
+                            <td class="btc-table-price">$0.00</td>
+                            <td class="btc-table-change">0.00%</td>
+                        </tr>
+                        <tr id="table-eth">
+                            <td><iconify-icon icon="cryptocurrency-color:eth"></iconify-icon> <b>Ethereum</b> <span class="sym">ETH</span></td>
+                            <td class="eth-table-price">$0.00</td>
+                            <td class="eth-table-change">0.00%</td>
+                        </tr>
+                        <tr id="table-eur">
+                            <td><iconify-icon icon="cryptocurrency-color:eur"></iconify-icon> <b>Euro</b> <span class="sym">EUR</span></td>
+                            <td class="eur-table-price">$1.09</td>
+                            <td class="eur-table-change">0.00%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="upgrade-side">
+            <!-- <div class="convert-side"></div> -->
+            <div >
+                <div>Upgrade Your Plan to Pro!</div>
+                <button class="upgrade-btn">Upgrade to Pro</button>
+            </div>
+        </div>
+    </section>
+    
+    </body>
+</html>
